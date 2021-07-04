@@ -1,22 +1,9 @@
-# TutorialWebservice
+# Cadastro de produtos
 
-Este projeto foi desenvolvido para a demonstrar algumas capacidades do HttpClient, uma abordagem de comunicação de entre o front-end Angular e um backend remoto utilizando JSON.
+Este projeto foi desenvolvido como uma atividade para a EAD 2 da matéria TC2.
 
 Este projeto é de caracter puramente didático e tem como ponto de partida desenvolvedores iniciantes na tecnologia para aprendizagem de um recurso específico do Angular. A interface utilizada é bastante inicial e limitada.
 
-Bons Estudos.
-
 ## Backend
 
-Esse repositório utiliza-se um webservice externo hospedado em `https://banco-dados-teste.glitch.me/`. Ao acessar este endereço, há um período de espera onde a aplicação é reiniciada até seu processo de pausa, que ocorre após 5 minutos de inatividade.
-
-### Rotas
-
-O Backend possui as seguintes rotas:
-
-**/api/produtos** (GET, POST, PUT, DELETE)
-
-- GET: Retorna os produtos cadastrados
-- POST: Adiciona um novo produto. É necessário repassar as informações `titulo`, `preco` e `descricao` no corpo da requisição.
-- PUT: Atualiza um produto já cadastrado. É necessário repassar as informações `titulo`, `preco` e `descricao` no corpo da requisição. É necessário informar o **\_id** do produto cadastro diretamente na URL de requisição: (Ex: _/api/produtos/607048aa34f27b00cc12a2d4_).
-- DELETE: Remove um produto cadastrado. É necessário informar o **\_id** do produto cadastro diretamente na URL de requisição: (Ex: _/api/produtos/607048aa34f27b00cc12a2d4_).
+Esse repositório utiliza-se um webservice externo hospedado em `https://podsclanbackend.glitch.me/`. Ao acessar este endereço, há um período de espera onde a aplicação é reiniciada até seu processo de pausa, que ocorre após 5 minutos de inatividade.
