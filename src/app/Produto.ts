@@ -1,9 +1,9 @@
 export interface Produto {
-    _id: string,
-    title: string,
-    description: string,
-    price: number,
-    createdAt: string,
-    updatedAt: string,
-    __v: number
+  _id: string;
+  titulo: string;
+  descricao: string;
+  preco: number;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
 }

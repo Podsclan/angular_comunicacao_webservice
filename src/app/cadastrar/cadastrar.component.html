@@ -1,12 +1,33 @@
-<div>
-    <label>Título
-        <input [(ngModel)]="produto.title" placeholder="Título">
-    </label>
-    <label>Preço
-        <input [(ngModel)]="produto.price" placeholder="Preço">
-    </label>
-    <label>Descrição
-        <textarea [(ngModel)]="produto.description" placeholder="Descrição"></textarea>
-    </label>
-    <button (click)="cadastrar()">Cadastro de produto</button>
+<div [ngStyle]="{ width: '100%', textAlign: '-webkit-center' }">
+  <h2>Cadastrar Produto</h2>
+  <div [ngStyle]="{ width: '25%' }" class="form-floating">
+    <input
+      id="tituloInput"
+      class="form-control"
+      [(ngModel)]="produto.titulo"
+      placeholder="Título"
+    />
+    <label for="tituloInput">Título</label>
+  </div>
+  <div [ngStyle]="{ width: '25%' }" class="form-floating">
+    <input
+      id="precoInput"
+      class="form-control"
+      [(ngModel)]="produto.preco"
+      placeholder="Preço"
+    />
+    <label for="precoInput">Preço</label>
+  </div>
+  <div [ngStyle]="{ width: '25%' }" class="form-floating">
+    <textarea
+      id="descricaoInput"
+      class="form-control"
+      [(ngModel)]="produto.descricao"
+      placeholder="Descrição"
+    ></textarea>
+    <label for="descricaoInput">Descrição</label>
+  </div>
+  <button class="btn btn-primary" (click)="cadastrar()">
+    Cadastro de produto
+  </button>
 </div>

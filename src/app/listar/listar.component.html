@@ -1,18 +1,50 @@
 <div>
-    <table>
-        <thead>
-            <tr>
-                <td>Preço</td>
-                <td>Descrição</td>
-                <td>Título</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let p of listaProdutos">
-                <td>{{p.price}}</td>
-                <td>{{p.description}}</td>
-                <td>{{p.title}}</td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Preço</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Título</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of listaProdutos" [ngSwitch]="productEdit._id">
+        <td *ngSwitchDefault>{{ p.preco }}</td>
+        <td *ngSwitchDefault>{{ p.descricao }}</td>
+        <td *ngSwitchDefault>{{ p.titulo }}</td>
+
+        <td *ngSwitchCase="p._id">
+          <input [(ngModel)]="productEdit.preco" value="{{ p.preco }}" />
+        </td>
+        <td *ngSwitchCase="p._id">
+          <input
+            [(ngModel)]="productEdit.descricao"
+            value="{{ p.descricao }}"
+          />
+        </td>
+        <td *ngSwitchCase="p._id">
+          <input [(ngModel)]="productEdit.titulo" value="{{ p.titulo }}" />
+        </td>
+
+        <td>
+          <button class="btn btn-primary" (click)="editCondition(p)">
+            {{ productEdit._id === p._id ? "Salvar" : "Editar" }}
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deletarProduto(p._id)">
+            Remover
+          </button>
+        </td>
+        <td *ngSwitchCase="p._id">
+          <button class="btn btn-warning" (click)="clearEdit()">
+            Cancelar Edição
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

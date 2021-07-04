@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tutorialWebservice": {
+    "cadastroProdutos": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tutorialWebservice",
+            "outputPath": "dist/cadastroProdutos",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tutorialWebservice:build"
+            "browserTarget": "cadastroProdutos:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tutorialWebservice:build:production"
+              "browserTarget": "cadastroProdutos:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tutorialWebservice:build"
+            "browserTarget": "cadastroProdutos:build"
           }
         },
         "test": {
@@ -109,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tutorialWebservice:serve"
+            "devServerTarget": "cadastroProdutos:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tutorialWebservice:serve:production"
+              "devServerTarget": "cadastroProdutos:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "tutorialWebservice"
+  "defaultProject": "cadastroProdutos"
 }
